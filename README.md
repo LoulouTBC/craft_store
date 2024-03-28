@@ -1,4 +1,4 @@
-# wadi_alarab
+# craft_store
 
 A new Flutter project.
 
