@@ -20,22 +20,25 @@ class ProductItem extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Image.network(
-              'https://tameed.org/wadi_alarab/wadi_al_arab/public/storage/${product.image}',
-              fit: BoxFit.cover,
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) {
-                  return child;
-                }
-                return const Center(
-                  child: CircularProgressIndicator(color: Colors.black),
-                );
-              },
-              errorBuilder: (context, error, stackTrace) {
-                return const Center(
-                  child: Icon(Icons.error, size: 48, color: Colors.red),
-                );
-              },
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(30)),
+              child: Image.network(
+                'https://tameed.org/wadi_alarab/wadi_al_arab/public/storage/${product.image}',
+                fit: BoxFit.cover,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) {
+                    return child;
+                  }
+                  return const Center(
+                    child: CircularProgressIndicator(color: Colors.black),
+                  );
+                },
+                errorBuilder: (context, error, stackTrace) {
+                  return const Center(
+                    child: Icon(Icons.error, size: 48, color: Colors.red),
+                  );
+                },
+              ),
             ),
           ),
           Expanded(
