@@ -49,7 +49,7 @@ class ProductItem extends StatelessWidget {
                     product.name,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: size.width * 0.07),
+                        fontSize: size.width * 0.05),
                   ),
                 ),
                 Expanded(
